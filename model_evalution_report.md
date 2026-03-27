@@ -35,52 +35,34 @@ Evaluation Setup
 Dataset split: 80% Training / 20% Testing
 Target variable: price
 Evaluation performed on test set only to measure generalization
-Metrics used:
-Mean Absolute Error (MAE)
-Mean Squared Error (MSE)
-Root Mean Squared Error (RMSE)
-R² Score
-Evaluation Metrics
-1️ Mean Absolute Error (MAE)
 
-Definition:
+Metrics Used
+Mean Absolute Error (MAE)
+
 Average absolute difference between actual and predicted prices.
 
+MAE = mean(|y_true - y_pred|)
 
-Interpretation:
-On average, predictions are off by MAE price units.
+Interpretation: On average, predictions differ from actual prices by MAE units.
 
-2️ Mean Squared Error (MSE)
+Mean Squared Error (MSE)
 
-Definition:
 Average squared difference between actual and predicted prices.
 
-Interpretation:
-Penalizes large errors more heavily than MAE.
+MSE = mean((y_true - y_pred)^2)
 
-3️ Root Mean Squared Error (RMSE)
+Interpretation: Penalizes larger errors more than MAE.
 
-Definition:
+Root Mean Squared Error (RMSE)
+
 Square root of MSE.
 
-𝑅
-𝑀
-𝑆
-𝐸
-=
-𝑀
-𝑆
-𝐸
-RMSE=
-MSE
-	​
+RMSE = sqrt(MSE)
 
+Interpretation: Error in the same units as house price.
 
-Interpretation:
-Represents prediction error in the same units as price, making it easier to understand.
+R² Score (Coefficient of Determination)
 
-4️ R² Score (Coefficient of Determination)
-
-Definition:
 Measures how well the model explains the variance in house prices.
 
+R2 = 1 - (SS_res / SS_tot)
